@@ -22,8 +22,8 @@ var arraySquadre = [
 // Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti
 
 
-for (var i = 0; i < arraySquadre.length; i++) {
-  
+for (let i = 0; i < arraySquadre.length; i++) {
+
   var puntiRandom = Math.floor(Math.random()*5) + 1;
   var falliRandom = Math.floor(Math.random()*3) + 1;
   arraySquadre[i].punti = puntiRandom;

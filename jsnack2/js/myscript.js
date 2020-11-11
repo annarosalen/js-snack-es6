@@ -18,10 +18,22 @@ var arrayObj = [
 console.log(arrayObj);
 
 // creo una copia dell'array
-var arrayCopia = [];
+// sostituisco con spread
+var arrayCopia = [...arrayObj];
 
-for (var i = 0; i < arrayObj.length; i++) {
-  arrayCopia.push(arrayObj[i]);
+// stampo in html per verificare che non esca la proprietà di position nel primo array
+document.getElementById('primoArray').innerHTML = arrayObj[0].position;
+
+
+// funzione per  lettera random da inserire in position
+// sostituisco con arrow function e la sposto sopra
+const randomLetter = (num) => {
+   var risultato = '';
+   var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   for ( var i = 0; i < num; i++ ) {
+      risultato = letters.charAt(Math.floor(Math.random() * letters.length));
+   }
+   return risultato;
 }
 
 // pusho la nuova proprietà sul secondo array
@@ -32,14 +44,4 @@ for (var i = 0; i < arrayCopia.length; i++) {
 
 
 console.log(arrayCopia);
-
-
-// funzione per  lettera random da inserire in position
-function randomLetter(num) {
-   var risultato = '';
-   var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-   for ( var i = 0; i < num; i++ ) {
-      risultato = letters.charAt(Math.floor(Math.random() * letters.length));
-   }
-   return risultato;
-}
+document.getElementById('secondoArray').innerHTML = arrayCopia[0].position;

@@ -2,10 +2,14 @@
 // Creare un oggetto palla che abbia le seguenti proprietà. Nome = palla
 // Peso = 10
 
+// creo variabili let e le inserisco nell'oggetto senza il nome della chiave
+
+let name = "palla";
+let peso = "10";
 
 var palla = {
-  "nome" : "palla",
-  "peso" : 10
+  name,
+  peso
 }
 
 console.log(palla);
