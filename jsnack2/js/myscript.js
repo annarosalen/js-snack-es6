@@ -17,17 +17,23 @@ var arrayObj = [
 
 console.log(arrayObj);
 
-// creo una copia dell'array
-// sostituisco con spread
-var arrayCopia = [...arrayObj];
+// creo una copia dell'array con map
+arrayCopia=[];
 
-// stampo in html per verificare che non esca la proprietà di position nel primo array
-document.getElementById('primoArray').innerHTML = arrayObj[0].position;
+var arrayCopia = arrayObj.map(obj =>{
+   var copiaOggetti = {};
+   copiaOggetti["name"] = obj.name;
+   copiaOggetti["type"] = obj.type;
+   copiaOggetti["color"] = obj.color;
+   return copiaOggetti;
+});
 
+// ALTERNATIVA:
+// var arrayCopia = arrayObj.map((element) => ({...element}) );
 
 // funzione per  lettera random da inserire in position
 // sostituisco con arrow function e la sposto sopra
-const randomLetter = (num) => {
+let randomLetter = (num) => {
    var risultato = '';
    var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
    for ( var i = 0; i < num; i++ ) {
@@ -42,6 +48,8 @@ for (var i = 0; i < arrayCopia.length; i++) {
   arrayCopia[i].position = position;
 }
 
+// stampo in html per verificare che non esca la proprietà di position nel primo array
+document.getElementById('primoArray').innerHTML = arrayObj[0].position;
 
 console.log(arrayCopia);
 document.getElementById('secondoArray').innerHTML = arrayCopia[0].position;
