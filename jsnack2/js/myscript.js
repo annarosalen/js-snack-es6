@@ -18,9 +18,9 @@ var arrayObj = [
 console.log(arrayObj);
 
 // creo una copia dell'array con map
-arrayCopia=[];
+var arrayCopia=[];
 
-var arrayCopia = arrayObj.map(obj =>{
+arrayCopia = arrayObj.map(obj =>{
    var copiaOggetti = {};
    copiaOggetti["name"] = obj.name;
    copiaOggetti["type"] = obj.type;
