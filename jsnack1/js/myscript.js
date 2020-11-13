@@ -12,8 +12,8 @@ var secondoNum = prompt("inserisci un altro numero tra 0 e 6");
 // var nuovoArray = myArray.slice(primoNum, secondoNum);
 
 
-var nuovoArray = myArray.filter((index) => {
-  return index >= primoNum, index <= secondoNum
+var nuovoArray = myArray.filter((element,index) => {
+  return index >= primoNum && index <= secondoNum
 });
 
 console.log(nuovoArray);
