@@ -22,12 +22,22 @@ var arraySquadre = [
 // Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti
 
 
-for (let i = 0; i < arraySquadre.length; i++) {
+// for (let i = 0; i < arraySquadre.length; i++) {
+//
+//   var puntiRandom = Math.floor(Math.random()*5) + 1;
+//   var falliRandom = Math.floor(Math.random()*3) + 1;
+//   arraySquadre[i].punti = puntiRandom;
+//   arraySquadre[i].falli = falliRandom;
+//
+//   console.log(arraySquadre[i]);
+// }
 
-  var puntiRandom = Math.floor(Math.random()*5) + 1;
-  var falliRandom = Math.floor(Math.random()*3) + 1;
-  arraySquadre[i].punti = puntiRandom;
-  arraySquadre[i].falli = falliRandom;
+// alternativa con for each
 
-  console.log(arraySquadre[i]);
-}
+arraySquadre.forEach((item) => {
+
+  item.punti = Math.floor(Math.random()*10) + 1;
+  item.falli = Math.floor(Math.random()*50) + 1;
+
+  console.log(item);
+});
