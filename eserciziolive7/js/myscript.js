@@ -26,12 +26,21 @@ var arraybici = [
 // modifico da var a let nomi di variabili che penso di riutilizzare in futuro
 let piuLeggera = arraybici[0];
 
-for (let i = 0; i < arraybici.length; i++) {
-  if(piuLeggera.peso > arraybici[i].peso){
-    piuLeggera = arraybici[i];
-  }
-}
-
-console.log(piuLeggera);
+// for (let i = 0; i < arraybici.length; i++) {
+//   if(piuLeggera.peso > arraybici[i].peso){
+//     piuLeggera = arraybici[i];
+//   }
+// }
+//
+// console.log(piuLeggera);
 
 // oppure metti sort
+
+
+// versione con for each
+arraybici.forEach((item) => {
+  if(piuLeggera.peso > item.peso){
+      piuLeggera = item;
+    }
+});
+console.log(piuLeggera);
