@@ -15,7 +15,6 @@ var arrayObj = [
   {name: 'Jenny', type: 'borsa', color: 'pink'},
 ];
 
-console.log(arrayObj);
 
 // creo una copia dell'array con map
 var arrayCopia=[];
@@ -28,8 +27,6 @@ arrayCopia = arrayObj.map(obj =>{
    return copiaOggetti;
 });
 
-// ALTERNATIVA:
-// var arrayCopia = arrayObj.map((element) => ({...element}) );
 
 // funzione per  lettera random da inserire in position
 // sostituisco con arrow function e la sposto sopra
@@ -48,8 +45,17 @@ for (var i = 0; i < arrayCopia.length; i++) {
   arrayCopia[i].position = position;
 }
 
+// ALTERNATIVA PER LA COPIA:
+// arrayLettere = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+// var arrayCopia = arrayObj.map((element) => ({
+//   return {...element, position: arrayLettere.[Math.floor(Math.random() * letters.length)]}
+// });
+
+
+console.log(arrayObj);
+console.log(arrayCopia);
+
 // stampo in html per verificare che non esca la proprietà di position nel primo array
 document.getElementById('primoArray').innerHTML = arrayObj[0].position;
 
-console.log(arrayCopia);
 document.getElementById('secondoArray').innerHTML = arrayCopia[0].position;
